@@ -1,4 +1,14 @@
-
+from pyrogram import Client, filters
+from pyrogram.errors import FloodWait
+ 
+from pyrogram.types import ChatPermissions
+ 
+import time
+from time import sleep
+import random
+ 
+app = Client("my_account")
+ 
 # Команда type
 @app.on_message(filters.command("type", prefixes=".") & filters.me)
 def type(_, msg):
